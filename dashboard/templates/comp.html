@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Alegeri</title>
+    {% load static %}
+    {% load plotly_dash %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Romanian Public Data Portal</h1>
+
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'download' %}">Download Data</a></li>
+                <li>
+                    <a href="#">Analyze Data</a>
+                    <ul>
+                        <li><a href="{% url 'dash_app_index' %}">Electoral Data</a></li>
+                        <li><a href="{% url 'rest' %}">Financial and Social Data</a></li>
+                        <li><a href="{% url 'stat' %}">Statistical Tool</a></li>
+                        <li><a href="{% url 'comp' %}">Compare Data</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Login</a>
+                    <ul>
+                        <li><a href="{% url 'login' %}">Login</a></li>
+                        <li><a href="{% url 'register' %}">Create Account</a></li>
+                    </ul>
+                </li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Alegeri</title>
+    {% load static %}
+    {% load plotly_dash %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Romanian Public Data Portal</h1>
+
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'download' %}">Download Data</a></li>
+                <li>
+                    <a href="#">Analyze Data</a>
+                    <ul>
+                        <li><a href="{% url 'dash_app_index' %}">Electoral Data</a></li>
+                        <li><a href="{% url 'rest' %}">Financial and Social Data</a></li>
+                        <li><a href="{% url 'stat' %}">Statistical Tool</a></li>
+                        <li><a href="{% url 'comp' %}">Compare Data</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Login</a>
+                    <ul>
+                        <li><a href="{% url 'login' %}">Login</a></li>
+                        <li><a href="{% url 'register' %}">Create Account</a></li>
+                    </ul>
+                </li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="intro gradient-1">
+        <div class="container">
+            <h2>Welcome to the Romanian Public Data Portal</h2>
+            <p>Discover, analyze, and compare official electoral, social and economic data from Romania. Our platform offers a comprehensive collection of electoral results, financial and social data, and statistical tools to help you make informed decisions. Whether you're a student, researcher, or just curious, our data is available to you.</p>
+        </div>
+    </section>
+
+    <section class="cta-login gradient-2">
+        <div class="container cta-flex">
+            <div>
+                <a href="{% url 'login' %}" class="cta-button">Click Here to Log In</a>
+            </div>
+            <div>
+                <a href="{% url 'register' %}" class="cta-button">Or Create an Account</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="features gradient-1">
+        <div class="container">
+            <h3>Our Features</h3>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <h4><a href="{% url 'dash_app_index' %}">Data Visualization</a></h4>
+                    <p>Access interactive charts and maps showcasing electoral results from across Romania.</p>
+                </div>
+                <div class="feature-item">
+                    <h4><a href="{% url 'comp' %}">Data Comparison</a></h4>
+                    <p>Compare data from different elections or between regions with our powerful comparison tools.</p>
+                </div>
+                <div class="feature-item">
+                    <h4><a href="{% url 'download' %}">Download Data</a></h4>
+                    <p>Download datasets for your research or analysis in various formats.</p>
+                </div>
+                <div class="feature-item">
+                    <h4><a href="{% url 'stat' %}">Statistical Tools</a></h4>
+                    <p>Utilize basic statistical tools to perform quick analyses on the data available on our platform.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter gradient-2">
+        <div class="container">
+            <h3>Stay Updated</h3>
+            <p>Subscribe to our newsletter to receive the latest updates and data directly in your inbox.</p>
+            <form action="#">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="contact-info gradient-1">
+        <div class="container">
+            <h3>Contact Us</h3>
+            <p>If you have data to share or questions, feel free to reach out at <a href="mailto:contact@electionsdata.ro">contact@electionsdata.ro</a>. We're constantly working to update the site with data from after 1990 and beyond.</p>
+            <p>If you want to find more information about us, click here:</p>
+            <a href="{% url 'contact' %}" class="cta-button">More Info</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Romanian Elections Data Portal. All rights reserved.</p>
+    </footer>
+</body>
+</html>

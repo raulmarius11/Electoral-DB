@@ -1,0 +1,459 @@
+/* Base styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #e0f7fa, #80deea); /* Gradientul pentru fundal */
+}
+
+/* Header styling */
+header {
+    background: linear-gradient(to right, #0056b3, #003d80); /* Gradient albastru mai închis */
+    color: white;
+    padding: 30px;
+    text-align: center;
+    border: none;
+    margin: 0;
+    box-shadow: none;
+}
+
+header h1 {
+    margin: 0; /* Elimină marginea din jurul titlului */
+}
+
+/* Navigation menu styling */
+nav {
+    margin: 0; /* Elimină marginea */
+    position: relative; /* Adăugat pentru a permite folosirea z-index */
+    z-index: 1000; /* Setează un z-index mare pentru a aduce nav bar-ul în față */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0 0 0; /* Adaugă margine superioară pentru a face meniul să fie puțin mai jos față de titlu */
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+    margin-bottom: 10px; /* Adaugă margine inferioară pentru a distanța itemii din meniu */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ccc;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    background-color: #007bff; /* Fundalul dropdown-ului */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px;
+    left: 0;
+    white-space: nowrap;
+    margin: 0; /* Elimină marginile */
+    border: none; /* Elimină border-ul */
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li {
+    display: block;
+    margin-right: 0;
+}
+
+nav ul li ul li a {
+    color: white;
+}
+
+nav ul li ul li a:hover {
+    background-color: #0056b3; /* Albastru mai închis pentru hover */
+    color: white;
+}
+
+/* Footer styling */
+footer {
+    background-color: #222; /* Fundalul footer-ului */
+    color: white;
+    text-align: center;
+    padding: 12px 20px;
+    margin-top: auto;  /* Puts footer at the bottom of the page */
+}
+
+/* Intro Section */
+.intro {
+    background: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.intro h2 {
+    color: #003d80;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Features Section */
+.features {
+    background: #f5f5f5;
+    padding: 40px 20px;
+}
+
+.features .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.features h3 {
+    text-align: center;
+    color: #003d80;
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.feature-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.feature-item {
+    background: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 23%;
+    text-align: center;
+}
+
+.feature-item h4 {
+    color: #0056b3;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.feature-item p {
+    font-size: 16px;
+    color: #777;
+}
+
+/* Newsletter Section */
+.newsletter {
+    background: #80deea;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.newsletter h3 {
+    color: #003d80;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.newsletter p {
+    font-size: 18px;
+    color: #555;
+}
+
+.newsletter form {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.newsletter input[type="email"] {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 10px;
+    width: 300px;
+}
+
+.newsletter button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #0056b3;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.newsletter button:hover {
+    background-color: #003d80;
+}
+
+/* Contact Info Section */
+.contact-info {
+    background: #e0f7fa;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contact-info h3 {
+    color: #003d80;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 18px;
+    color: #555;
+}
+
+.contact-info a {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* More Info Button in Contact Section */
+.contact-info .cta-button {
+    background-color: #0056b3;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.contact-info .cta-button:hover {
+    background-color: #003d80;
+}
+
+/* Call-to-Action Login/Create Account Section */
+.cta-login {
+    background: #f5f5f5;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.cta-flex {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.cta-button {
+    background-color: #0056b3;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    margin: 10px;
+}
+
+.cta-button:hover {
+    background-color: #003d80;
+}
+
+/* Gradient 1: Light Blue to Light Cyan */
+.gradient-1 {
+    background: linear-gradient(to bottom, #e0f7fa, #80deea);
+}
+
+/* Gradient 2: Light to Darker Blue */
+.gradient-2 {
+    background: linear-gradient(to bottom, #80deea, #007bff);
+}
+
+/* Login/Register Page Container */
+.login-container, .register-container, .register-success {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    padding: 20px;
+}
+
+/* Login/Register Box Styling */
+.login-box, .register-box {
+    background-color: white;
+    padding: 40px 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.register-box {
+    max-width: 500px;
+}
+
+.login-box h2, .register-box h2 {
+    margin-bottom: 30px;
+    color: #003d80;
+    font-size: 24px;
+}
+
+/* Input group styling */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Action buttons */
+.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.forgot-password, .register-link a {
+    color: #0056b3;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.forgot-password:hover, .register-link a:hover {
+    color: #003d80;
+}
+
+.register-link {
+    margin-top: 30px;
+    font-size: 14px;
+}
+
+.cta-button {
+    background-color:red;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #003d80;
+}
+
+/* Register Success Box Styling */
+.register-success .register-box {
+    max-width: 500px;
+}
+
+.register-success p {
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.register-success a {
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.register-success a:hover {
+    color: #003d80;
+}
+
+/* Login prompt above the registration form */
+.login-prompt {
+    font-size: 16px;
+    color: #003d80;
+    margin-bottom: 20px;
+}
+
+.login-prompt a {
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.login-prompt a:hover {
+    color: #003d80;
+}
+/* Register Page Container */
+/* Register Page Container */
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Aliniere la început pentru a împinge formularul mai jos */
+    min-height: 100vh; /* Înălțime minimă pentru a preveni suprapunerea cu footer-ul */
+    padding: 60px 20px; /* Mai mult padding pentru a evita suprapunerea cu header-ul */
+    margin-top: 20px;
+}
+
+/* Register Box Styling */
+.register-box {
+    background-color: white;
+    padding: 40px 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    margin-bottom: 40px; /* Menținem un margin-bottom pentru a asigura spațiul față de footer */
+}
+
+/* Login prompt under the title */
+.login-prompt {
+    font-size: 16px;
+    color: #003d80;
+    margin-bottom: 20px;
+}
+
+.login-prompt a {
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.login-prompt a:hover {
+    color: #003d80;
+}
